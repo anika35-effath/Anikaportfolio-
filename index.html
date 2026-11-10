@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Effath Afifah Anika (Effath Anika) — Software & Backend Engineer | CSE Student at Gopalganj Science & Technology University (GSTU). Object-oriented systems, REST APIs, data analysis, and competitive programming in C++, Java, and Python.">
+  <meta name="keywords" content="Effath Anika, Effath Afifah Anika, anika35-effath, 4caterpillar, Software Engineer, Backend Engineer, C++, Java, Python, Codeforces, Toph, GSTU, Portfolio">
+  <meta name="author" content="Effath Afifah Anika">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Effath Anika | Software & Backend Engineer">
+  <meta property="og:description" content="Software & Backend Engineering portfolio of Effath Anika. Systems architecture, algorithmic problem solving, REST APIs, and database modeling.">
+
+  <title>Effath Anika | Software & Backend Engineer</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Dynamic Interactive Particle Canvas Background -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Floating Toast Notification -->
+  <div class="toast-notice" id="toastNotice">✓ Copied to clipboard!</div>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to Top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- =========================================================================
+       Navigation Bar
+       ========================================================================= -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="logo-link">
+        <div class="logo-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="16 18 22 12 16 6"></polyline>
+            <polyline points="8 6 2 12 8 18"></polyline>
+          </svg>
+        </div>
+        <span class="logo-prompt">anika<span>@root:~$</span></span>
+      </a>
+
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#battleship" class="nav-link">Battleship</a></li>
+          <li><a href="#problem-solving" class="nav-link">Problem Solving</a></li>
+          <li><a href="#terminal" class="nav-link">Terminal</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- GitHub Link -->
+        <a href="https://github.com/anika35-effath" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-icon link-github" title="GitHub / anika35-effath">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+          </svg>
+        </a>
+
+        <!-- Gmail Direct Compose Link -->
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=effathanika@gmail.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-icon" title="Compose Email to effathanika@gmail.com">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+        </a>
+
+        <a href="#contact" class="btn btn-primary">Connect</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- =========================================================================
+         Hero Section
+         ========================================================================= -->
+    <section class="hero-section" id="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <div class="hero-status-pill">
+              <span class="status-dot"></span>
+              <span>Open to Software & Backend Roles</span>
+            </div>
+
+            <h1 class="hero-title">
+              Hi, I'm <span class="gradient-text dynamic-name">Effath Anika</span>
+            </h1>
+
+            <div class="hero-typewriter-box">
+              <span style="color: var(--accent-pink);">&gt;</span>
+              <span id="typewriterText">Software & Backend Engineer</span>
+              <span class="typewriter-cursor"></span>
+            </div>
+
+            <p class="hero-description">
+              2nd-Year Computer Science & Engineering undergrad at <strong>Gopalganj Science & Technology University (GSTU)</strong>. Enthusiastic about low-level memory efficiency, clean object-oriented architecture, and scalable backend REST services. Coding solutions daily in <strong>C++</strong>, <strong>Java</strong>, and <strong>Python</strong>.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#projects" class="btn btn-primary">
+                <span>View Engineering Projects</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+              <a href="#terminal" class="btn btn-outline">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="4 17 10 11 4 5"></polyline>
+                  <line x1="12" y1="19" x2="20" y2="19"></line>
+                </svg>
+                <span>Interactive Terminal</span>
+              </a>
+            </div>
+
+            <!-- Social & Profile Links Row -->
+            <div class="hero-social-row">
+              <a href="https://github.com/anika35-effath" target="_blank" rel="noopener noreferrer" class="social-badge-link link-github">
+                <span>GitHub</span>
+                <span class="mono">/anika35-effath</span>
+              </a>
+              <a href="https://codeforces.com/profile/4caterpillar" target="_blank" rel="noopener noreferrer" class="social-badge-link link-cf">
+                <span style="color: var(--accent-pink);">CF</span>
+                <span class="mono">/4caterpillar</span>
+              </a>
+              <a href="https://toph.co/u/effathanika" target="_blank" rel="noopener noreferrer" class="social-badge-link link-toph">
+                <span style="color: var(--accent-lavender);">Toph</span>
+                <span class="mono">/effathanika</span>
+              </a>
+              <a href="https://wa.me/8801344885035" target="_blank" rel="noopener noreferrer" class="social-badge-link link-whatsapp">
+                <span style="color: var(--color-whatsapp);">WhatsApp</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Hero Right Profile Card -->
+          <div class="hero-card-wrapper">
+            <div class="hero-profile-card">
+              <div class="hero-profile-header">
+                <div class="avatar-wrapper">
+                  <img src="assets/profile-avatar.svg" alt="Effath Anika Avatar" class="avatar-img" id="heroAvatar">
+                  <div class="avatar-status-badge" title="Active & Ready to Collaborate"></div>
+                </div>
+                <div>
+                  <h3 class="profile-meta-title dynamic-fullname">Effath Afifah Anika</h3>
+                  <div class="profile-meta-handle">@anika35-effath</div>
+                  <div class="profile-meta-dept">CSE @ Gopalganj Science & Tech Univ</div>
+                </div>
+              </div>
+
+              <!-- Quick Metrics Grid -->
+              <div class="hero-metrics-grid">
+                <div class="metric-box">
+                  <div class="metric-label">Primary Stack</div>
+                  <div class="metric-val mono">C++, Python, Java</div>
+                </div>
+                <div class="metric-box">
+                  <div class="metric-label">Focus Area</div>
+                  <div class="metric-val mono">Backend & OOP</div>
+                </div>
+                <div class="metric-box">
+                  <div class="metric-label">Problem Solving</div>
+                  <div class="metric-val mono">CF & Toph Solver</div>
+                </div>
+                <div class="metric-box">
+                  <div class="metric-label">Data Analytics</div>
+                  <div class="metric-val mono">Pandas & NumPy</div>
+                </div>
+              </div>
+
+              <!-- Mini Mock Code Terminal Widget -->
+              <div class="card-terminal-snip">
+                <div class="snip-header">
+                  <div class="snip-dots">
+                    <span class="snip-dot red"></span>
+                    <span class="snip-dot yellow"></span>
+                    <span class="snip-dot green"></span>
+                  </div>
+                  <span class="snip-lang mono">EngineController.cpp</span>
+                </div>
+                <div class="snip-code mono">
+                  <span class="kw">class</span> <span class="fn">BattleshipEngine</span> {<br>
+                  &nbsp;&nbsp;<span class="kw">private</span>: GridMatrix grid;<br>
+                  &nbsp;&nbsp;<span class="kw">public</span>:<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;SalvoResult <span class="fn">fireTorpedo</span>(Coord pt) {<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kw">return</span> grid.<span class="fn">validateHit</span>(pt);<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                  };
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         About Section & Engineering Philosophy
+         ========================================================================= -->
+    <section class="about-section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="16" x2="12" y2="12"></line>
+              <line x1="12" y1="8" x2="12.01" y2="8"></line>
+            </svg>
+            <span>Engineering Profile</span>
+          </div>
+          <h2 class="section-title">Bridging Theory & Systems Craftsmanship</h2>
+          <p class="section-subtitle">
+            A deep-dive into core computer science foundations, clean abstractions, and backend architectural discipline.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <div class="glass-card">
+            <h3 style="margin-bottom: 1.2rem; font-size: 1.4rem;">Architectural Mindset</h3>
+            <p class="about-bio-text">
+              As an undergraduate in <strong>Computer Science & Engineering at GSTU</strong>, I approach software construction with an emphasis on <strong>predictable state, memory efficiency, and structural elegance</strong>. Whether structuring object hierarchies in Java, optimizing asymptotic algorithms in C++, or organizing database relations for RESTful services in Python, my goal is always maintainable, bulletproof software.
+            </p>
+            <p class="about-bio-text">
+              I actively bridge rigorous coursework in <strong>Discrete Mathematics</strong> and <strong>Data Structures</strong> with real-world engineering practices—designing modular APIs, adhering to SOLID principles, and performing systematic algorithmic benchmarking.
+            </p>
+          </div>
+
+          <div class="glass-card">
+            <h3 style="margin-bottom: 1.2rem; font-size: 1.4rem;">Daily Engineering Habits</h3>
+            <div style="display: flex; flex-direction: column; gap: 1rem;">
+              <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                <div style="width: 32px; height: 32px; border-radius: 8px; background: rgba(168,85,247,0.15); display: flex; align-items: center; justify-content: center; color: var(--accent-lavender); flex-shrink: 0;">⚡</div>
+                <div>
+                  <h4 style="font-size: 1rem; margin-bottom: 0.2rem;">Algorithmic Rigor</h4>
+                  <p style="font-size: 0.9rem; color: var(--text-secondary);">Daily competitive problem solving on Codeforces and Toph, strengthening mathematical intuitions and boundary invariants.</p>
+                </div>
+              </div>
+
+              <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                <div style="width: 32px; height: 32px; border-radius: 8px; background: rgba(244,63,94,0.15); display: flex; align-items: center; justify-content: center; color: var(--accent-pink); flex-shrink: 0;">🏛️</div>
+                <div>
+                  <h4 style="font-size: 1rem; margin-bottom: 0.2rem;">Normalized Data Modeling</h4>
+                  <p style="font-size: 0.9rem; color: var(--text-secondary);">Designing 3NF relational schemas, mapping Entity-Relationship models, and crafting predictable RESTful contracts.</p>
+                </div>
+              </div>
+
+              <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                <div style="width: 32px; height: 32px; border-radius: 8px; background: rgba(56,189,248,0.15); display: flex; align-items: center; justify-content: center; color: var(--accent-cyan); flex-shrink: 0;">📊</div>
+                <div>
+                  <h4 style="font-size: 1rem; margin-bottom: 0.2rem;">Computational Data Analysis</h4>
+                  <p style="font-size: 0.9rem; color: var(--text-secondary);">Benchmarking algorithmic runtimes, processing datasets with Pandas & NumPy, and visualizing performance metrics.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Domain Deep-Dive Tabs -->
+        <div class="domain-tabs-nav" id="domainTabsNav"></div>
+        <div id="domainContentContainer"></div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         Skills Matrix Section
+         ========================================================================= -->
+    <section class="skills-section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+              <polyline points="2 17 12 22 22 17"></polyline>
+              <polyline points="2 12 12 17 22 12"></polyline>
+            </svg>
+            <span>Technical Capabilities</span>
+          </div>
+          <h2 class="section-title">Core Competencies & Stack</h2>
+          <p class="section-subtitle">
+            A structured breakdown of languages, systems design principles, databases, and engineering workflows.
+          </p>
+        </div>
+
+        <div class="skills-matrix-grid">
+          <!-- Card 1: Core Languages -->
+          <div class="skill-matrix-card">
+            <div class="skill-card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
+            </div>
+            <h3 class="skill-card-heading">Programming Languages</h3>
+            <p class="skill-card-desc">Strong procedural and object-oriented foundations across modern systems and scripting languages.</p>
+            <div class="skill-pills-wrap">
+              <span class="skill-pill">C++ (STL & Pointers)</span>
+              <span class="skill-pill">Java (OOP Architecture)</span>
+              <span class="skill-pill">Python (Backend & Data)</span>
+              <span class="skill-pill">C (Memory & Low-Level)</span>
+              <span class="skill-pill">SQL (DDL & DML)</span>
+            </div>
+          </div>
+
+          <!-- Card 2: Backend & Systems -->
+          <div class="skill-matrix-card">
+            <div class="skill-card-icon" style="background: rgba(244,63,94,0.15); color: var(--accent-pink); border-color: rgba(244,63,94,0.3);">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                <line x1="6" y1="18" x2="6.01" y2="18"></line>
+              </svg>
+            </div>
+            <h3 class="skill-card-heading">Backend & System Design</h3>
+            <p class="skill-card-desc">Designing resilient server interfaces, decoupled service layers, and state machine workflows.</p>
+            <div class="skill-pills-wrap">
+              <span class="skill-pill">RESTful API Architecture</span>
+              <span class="skill-pill">SOLID Design Principles</span>
+              <span class="skill-pill">State Pattern Machines</span>
+              <span class="skill-pill">MVC Pattern</span>
+              <span class="skill-pill">JSON Request Pipelines</span>
+              <span class="skill-pill">Error Code Protocol</span>
+            </div>
+          </div>
+
+          <!-- Card 3: Databases & Modeling -->
+          <div class="skill-matrix-card">
+            <div class="skill-card-icon" style="background: rgba(56,189,248,0.15); color: var(--accent-cyan); border-color: rgba(56,189,248,0.3);">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+              </svg>
+            </div>
+            <h3 class="skill-card-heading">Databases & Modeling</h3>
+            <p class="skill-card-desc">Relational schema design, normalization disciplines, and foreign-key referential integrity.</p>
+            <div class="skill-pills-wrap">
+              <span class="skill-pill">Schema Normalization (1NF-3NF)</span>
+              <span class="skill-pill">Entity-Relationship (ERD)</span>
+              <span class="skill-pill">Complex JOIN Operations</span>
+              <span class="skill-pill">SQLite & PostgreSQL</span>
+              <span class="skill-pill">Index Optimization</span>
+            </div>
+          </div>
+
+          <!-- Card 4: Data Analysis & Analytics -->
+          <div class="skill-matrix-card">
+            <div class="skill-card-icon" style="background: rgba(16,185,129,0.15); color: var(--accent-emerald); border-color: rgba(16,185,129,0.3);">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="20" x2="18" y2="10"></line>
+                <line x1="12" y1="20" x2="12" y2="4"></line>
+                <line x1="6" y1="20" x2="6" y2="14"></line>
+              </svg>
+            </div>
+            <h3 class="skill-card-heading">Data Analysis & Computing</h3>
+            <p class="skill-card-desc">Processing structured datasets, computing runtime benchmarks, and producing empirical telemetry.</p>
+            <div class="skill-pills-wrap">
+              <span class="skill-pill">Pandas DataFrames</span>
+              <span class="skill-pill">NumPy Vectorized Arrays</span>
+              <span class="skill-pill">Matplotlib & Seaborn</span>
+              <span class="skill-pill">Empirical Runtime Benchmarks</span>
+              <span class="skill-pill">Dataset Sanitization</span>
+            </div>
+          </div>
+
+          <!-- Card 5: DSA & Problem Solving -->
+          <div class="skill-matrix-card">
+            <div class="skill-card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="3"></circle>
+                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+              </svg>
+            </div>
+            <h3 class="skill-card-heading">Data Structures & DSA</h3>
+            <p class="skill-card-desc">Abstract data structures, algorithmic design patterns, and asymptotic space-time bounds.</p>
+            <div class="skill-pills-wrap">
+              <span class="skill-pill">Time-Space Complexity (O-Notation)</span>
+              <span class="skill-pill">Binary Search & Two Pointers</span>
+              <span class="skill-pill">Greedy Algorithmic Proofs</span>
+              <span class="skill-pill">Number Theory & Modular Math</span>
+              <span class="skill-pill">Recursion & Backtracking</span>
+            </div>
+          </div>
+
+          <!-- Card 6: Developer Workflow -->
+          <div class="skill-matrix-card">
+            <div class="skill-card-icon" style="background: rgba(251,191,36,0.15); color: var(--accent-amber); border-color: rgba(251,191,36,0.3);">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="4 17 10 11 4 5"></polyline>
+                <line x1="12" y1="19" x2="20" y2="19"></line>
+              </svg>
+            </div>
+            <h3 class="skill-card-heading">Workflow & Environment</h3>
+            <p class="skill-card-desc">Command-line proficiency, collaborative version control, and debugging testbenches.</p>
+            <div class="skill-pills-wrap">
+              <span class="skill-pill">Git Branching & GitHub PRs</span>
+              <span class="skill-pill">Linux Bash Environment</span>
+              <span class="skill-pill">Postman API Testing</span>
+              <span class="skill-pill">VS Code & JetBrains IDEs</span>
+              <span class="skill-pill">GCC / G++ Compilers</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         Projects Section
+         ========================================================================= -->
+    <section class="projects-section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+              <line x1="8" y1="21" x2="16" y2="21"></line>
+              <line x1="12" y1="17" x2="12" y2="21"></line>
+            </svg>
+            <span>Engineering Showcase</span>
+          </div>
+          <h2 class="section-title">Highlighted Systems & Projects</h2>
+          <p class="section-subtitle">
+            Engineered systems highlighting object-oriented design, RESTful service layers, and asymptotic algorithm performance.
+          </p>
+        </div>
+
+        <!-- Filter Bar -->
+        <div class="projects-filter-bar">
+          <button class="filter-btn active" data-filter="all">All Systems</button>
+          <button class="filter-btn" data-filter="systems">Systems & C++/Java</button>
+          <button class="filter-btn" data-filter="backend">Backend & REST APIs</button>
+          <button class="filter-btn" data-filter="data">Data Analysis</button>
+        </div>
+
+        <!-- Projects Grid Container -->
+        <div class="projects-grid" id="projectsGrid"></div>
+
+        <!-- =====================================================================
+             Interactive Battleship Tactical Simulator Widget
+             ===================================================================== -->
+        <div class="battleship-simulator-section" id="battleship">
+          <div class="simulator-card">
+            <div class="simulator-header">
+              <div>
+                <span class="simulator-badge">Interactive Project Showcase</span>
+                <h3 style="font-size: 1.5rem; margin-top: 0.4rem;">Battleship Grid Strategy & Game Engine</h3>
+              </div>
+              <div class="sim-btns-row">
+                <button class="btn btn-outline btn-sm" id="simAiScanBtn" title="Execute algorithmic radar search pattern">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="m4.93 4.93 4.24 4.24"></path>
+                    <path d="m14.83 9.17 4.24-4.24"></path>
+                    <path d="m14.83 14.83 4.24 4.24"></path>
+                    <path d="m9.17 14.83-4.24 4.24"></path>
+                  </svg>
+                  <span>AI Radar Scan</span>
+                </button>
+                <button class="btn btn-outline btn-sm" id="simResetBtn" title="Reset deployment grid">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="1 4 1 10 7 10"></polyline>
+                    <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
+                  </svg>
+                  <span>Reset Grid</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="simulator-layout">
+              <div class="grid-wrapper">
+                <div class="grid-header-label">
+                  <span>5x5 MATRIX SONAR RADAR</span>
+                  <span class="mono" style="color: var(--accent-pink);">TARGETS: 4</span>
+                </div>
+                <div class="battleship-grid" id="battleshipGrid"></div>
+              </div>
+
+              <div class="simulator-controls">
+                <div>
+                  <h4 style="font-size: 1.1rem; margin-bottom: 0.4rem;">Engine Mechanics & State Pattern</h4>
+                  <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">
+                    Test the naval radar engine directly! The simulator demonstrates OOP encapsulation of grid coordinates, boundary collision detection, and probability-based salvo attacks.
+                  </p>
+                </div>
+                <div class="sim-status-log" id="simStatusLog">
+                  Initializing game engine...
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         Problem Solving & Competitive Programming Section
+         ========================================================================= -->
+    <section class="problem-solving-section" id="problem-solving">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+            </svg>
+            <span>Competitive Programming</span>
+          </div>
+          <h2 class="section-title">Problem Solving & Algorithms</h2>
+          <p class="section-subtitle">
+            Honing algorithmic discipline, mathematical problem modeling, and asymptotic time-space analysis.
+          </p>
+        </div>
+
+        <!-- Platforms Grid (Codeforces & Toph) -->
+        <div class="ps-platforms-grid" id="psPlatformsGrid"></div>
+
+        <!-- Topic Mastery Checklist Card -->
+        <div class="ps-topics-card">
+          <h3 class="ps-topics-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--accent-lavender);">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>Core Algorithmic Foundations</span>
+          </h3>
+          <div class="ps-topics-grid" id="psTopicsGrid"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         Interactive Terminal Section
+         ========================================================================= -->
+    <section class="terminal-section" id="terminal">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="4 17 10 11 4 5"></polyline>
+              <line x1="12" y1="19" x2="20" y2="19"></line>
+            </svg>
+            <span>Command Line Interface</span>
+          </div>
+          <h2 class="section-title">Developer Terminal Simulator</h2>
+          <p class="section-subtitle">
+            Interact with the portfolio directly via the simulated developer shell. Type commands or click the chips below.
+          </p>
+        </div>
+
+        <div class="terminal-window">
+          <div class="terminal-header-bar">
+            <div class="terminal-controls-dots">
+              <span class="t-dot red"></span>
+              <span class="t-dot yellow"></span>
+              <span class="t-dot green"></span>
+            </div>
+            <div class="terminal-title-text mono">
+              <span>anika@workstation:~ (zsh)</span>
+            </div>
+            <div style="width: 40px;"></div>
+          </div>
+
+          <div class="terminal-body">
+            <div class="terminal-output" id="terminalOutput"></div>
+            <div class="terminal-input-row">
+              <span class="terminal-prompt-label mono">anika@workstation:~$</span>
+              <input type="text" class="terminal-input" id="terminalInput" placeholder="type 'help' or click a command below..." autocomplete="off" spellcheck="false">
+            </div>
+          </div>
+
+          <!-- Quick Command Chips -->
+          <div class="terminal-quick-cmds">
+            <button class="terminal-chip-btn" data-cmd="help">help</button>
+            <button class="terminal-chip-btn" data-cmd="whoami">whoami</button>
+            <button class="terminal-chip-btn" data-cmd="skills">skills</button>
+            <button class="terminal-chip-btn" data-cmd="projects">projects</button>
+            <button class="terminal-chip-btn" data-cmd="battleship">battleship</button>
+            <button class="terminal-chip-btn" data-cmd="cf">cf</button>
+            <button class="terminal-chip-btn" data-cmd="toph">toph</button>
+            <button class="terminal-chip-btn" data-cmd="data">data</button>
+            <button class="terminal-chip-btn" data-cmd="edu">edu</button>
+            <button class="terminal-chip-btn" data-cmd="curl api/anika">curl api/anika</button>
+            <button class="terminal-chip-btn" data-cmd="clear">clear</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         Education Section
+         ========================================================================= -->
+    <section class="education-section" id="education">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+              <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+            </svg>
+            <span>Academic Background</span>
+          </div>
+          <h2 class="section-title">Education & Curriculum</h2>
+          <p class="section-subtitle">
+            Formal university engineering foundation at Gopalganj Science & Technology University (GSTU).
+          </p>
+        </div>
+
+        <div class="edu-timeline" id="eduTimeline"></div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         Contact Section
+         ========================================================================= -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            <span>Get In Touch</span>
+          </div>
+          <h2 class="section-title">Let's Connect & Collaborate</h2>
+          <p class="section-subtitle">
+            Interested in backend development, open-source engineering, or technical projects? Feel free to reach out.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info-panel">
+            <p class="contact-text">
+              I am actively seeking software and backend engineering opportunities, collaborative academic research, and open-source contributions. You can connect with me through any of the channels below:
+            </p>
+
+            <div class="contact-methods-list">
+              <!-- Email -->
+              <a href="mailto:effathanika@gmail.com" class="contact-method-card" data-copy="effathanika@gmail.com" title="Click to copy email address">
+                <div class="contact-method-icon email">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </div>
+                <div>
+                  <div class="contact-method-label">Direct Email (Click to Copy)</div>
+                  <div class="contact-method-val mono">effathanika@gmail.com</div>
+                </div>
+              </a>
+
+              <!-- WhatsApp -->
+              <a href="https://wa.me/8801344885035" target="_blank" rel="noopener noreferrer" class="contact-method-card">
+                <div class="contact-method-icon whatsapp">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12.031 2C6.494 2 2 6.494 2 12.031c0 1.808.48 3.52 1.319 5.006L2 22.062l5.176-1.319A9.972 9.972 0 0012.031 22c5.538 0 10.031-4.493 10.031-10.031S17.569 2 12.031 2zm5.795 14.153c-.244.686-1.22 1.258-1.724 1.332-.486.07-1.106.126-3.567-.887-2.92-1.201-4.786-4.184-4.93-4.379-.144-.194-1.168-1.554-1.168-2.964 0-1.41.737-2.102 1.002-2.39.264-.288.58-.36.772-.36.192 0 .384.004.551.012.179.009.418-.068.653.498.244.588.832 2.029.905 2.175.072.146.12.316.024.508-.096.192-.144.312-.288.48-.144.168-.303.376-.432.504-.144.144-.294.3-.127.587.168.288.746 1.233 1.6 1.993 1.101.979 2.027 1.282 2.315 1.426.288.144.456.12.624-.072.168-.192.72-1.032.912-1.392.192-.36.384-.3.648-.204.264.096 1.674.788 1.962.932.288.144.48.216.551.336.072.12.072.708-.172 1.394z"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="contact-method-label">WhatsApp Direct</div>
+                  <div class="contact-method-val mono">+880 1344-885035</div>
+                </div>
+              </a>
+
+              <!-- Facebook -->
+              <a href="https://www.facebook.com/share/154RdWzAsgG/" target="_blank" rel="noopener noreferrer" class="contact-method-card">
+                <div class="contact-method-icon facebook">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="contact-method-label">Facebook Profile</div>
+                  <div class="contact-method-val">facebook.com/share/154RdWzAsgG</div>
+                </div>
+              </a>
+
+              <!-- GitHub -->
+              <a href="https://github.com/anika35-effath" target="_blank" rel="noopener noreferrer" class="contact-method-card">
+                <div class="contact-method-icon github">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="contact-method-label">GitHub Repository</div>
+                  <div class="contact-method-val mono">github.com/anika35-effath</div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Direct Connect Card -->
+          <div class="direct-connect-card">
+            <h3 class="direct-connect-title">Quick Action Links</h3>
+            <p class="direct-connect-desc">
+              Send a direct message right into Gmail, start a conversation on WhatsApp, or inspect code repositories directly on GitHub.
+            </p>
+
+            <div class="direct-action-btns">
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=effathanika@gmail.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                <span>Compose Direct Email in Gmail</span>
+              </a>
+
+              <a href="https://wa.me/8801344885035" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color: rgba(37,211,102,0.4); color: #86efac;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12.031 2C6.494 2 2 6.494 2 12.031c0 1.808.48 3.52 1.319 5.006L2 22.062l5.176-1.319A9.972 9.972 0 0012.031 22c5.538 0 10.031-4.493 10.031-10.031S17.569 2 12.031 2zm5.795 14.153c-.244.686-1.22 1.258-1.724 1.332-.486.07-1.106.126-3.567-.887-2.92-1.201-4.786-4.184-4.93-4.379-.144-.194-1.168-1.554-1.168-2.964 0-1.41.737-2.102 1.002-2.39.264-.288.58-.36.772-.36.192 0 .384.004.551.012.179.009.418-.068.653.498.244.588.832 2.029.905 2.175.072.146.12.316.024.508-.096.192-.144.312-.288.48-.144.168-.303.376-.432.504-.144.144-.294.3-.127.587.168.288.746 1.233 1.6 1.993 1.101.979 2.027 1.282 2.315 1.426.288.144.456.12.624-.072.168-.192.72-1.032.912-1.392.192-.36.384-.3.648-.204.264.096 1.674.788 1.962.932.288.144.48.216.551.336.072.12.072.708-.172 1.394z"/>
+                </svg>
+                <span>Chat on WhatsApp (+880 1344-885035)</span>
+              </a>
+
+              <a href="https://github.com/anika35-effath" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                </svg>
+                <span>Explore Repositories on GitHub</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       Footer
+       ========================================================================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-copy">
+          © 2026 <strong class="dynamic-fullname">Effath Afifah Anika</strong>. Designed with pure standards (HTML5/CSS3/ES6+).
+        </div>
+        <div class="footer-links-row">
+          <a href="https://github.com/anika35-effath" target="_blank" rel="noopener noreferrer" class="footer-icon-link link-github" title="GitHub">GitHub</a>
+          <a href="https://codeforces.com/profile/4caterpillar" target="_blank" rel="noopener noreferrer" class="footer-icon-link link-cf" title="Codeforces">Codeforces</a>
+          <a href="https://toph.co/u/effathanika" target="_blank" rel="noopener noreferrer" class="footer-icon-link link-toph" title="Toph">Toph</a>
+          <a href="https://www.facebook.com/share/154RdWzAsgG/" target="_blank" rel="noopener noreferrer" class="footer-icon-link link-facebook" title="Facebook">Facebook</a>
+          <a href="https://wa.me/8801344885035" target="_blank" rel="noopener noreferrer" class="footer-icon-link link-whatsapp" title="WhatsApp">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Centralized Portfolio Data File -->
+  <script src="js/data.js"></script>
+
+  <!-- Main JavaScript Interactivity -->
+  <script src="js/script.js"></script>
+</body>
+</html>
